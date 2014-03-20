@@ -1,4 +1,4 @@
-(defproject stch-library/html "0.1.0-SNAPSHOT"
+(defproject stch-library/html "0.1.0"
   :description
   "DSL for HTML generation. Supports Clojure and ClojureScript."
   :url "https://github.com/stch-library/html"
