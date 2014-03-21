@@ -253,7 +253,9 @@ Finally there are some fns for generating common doctypes.
 ; #stch.html.Doctype{:declaration "HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n\"http://www.w3.org/TR/html4/loose.dtd\""}
 ```
 
+## Unit-tests
 
+Run "lein spec"
 
 
 
