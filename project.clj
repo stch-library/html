@@ -12,8 +12,6 @@
   :plugins [[speclj "3.0.2"]
             [lein-cljsbuild "1.0.2"]
             [codox "0.6.7"]]
-  :codox {:src-dir-uri "https://github.com/stch-library/html/blob/master/"
-          :src-linenum-anchor-prefix "L"}
   :source-paths ["src/clj" "src/cljs"]
   :test-paths ["spec"]
   :cljsbuild
