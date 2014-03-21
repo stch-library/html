@@ -9,7 +9,7 @@ Based on ideas and some code from [Hoplon](https://github.com/tailrecursion/hopl
 Add the following to your project dependencies:
 
 ```clojure
-[stch-library/html "0.1.0"]
+[stch-library/html "0.1.1"]
 ```
 
 ## API Documentation
