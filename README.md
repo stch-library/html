@@ -219,7 +219,7 @@ Text nodes are automatically escaped for security. If you need to render a strin
 ; "<script></script>"
 ```
 
-### Form fns
+### Form helpers
 
 There are a few form helper functions.
 
