@@ -73,6 +73,16 @@
       (it "Sequential"
         (should= #{"big" "bad" "bold"}
                  (classes->set ["big" "bad" "bold"])))))
+  (context "class"
+    (it "String"
+      (should= "<div class=\"big bold\"></div>"
+               (->html (div :class "big bold"))))
+    (it "Set"
+      (should= "<div class=\"big bold\"></div>"
+               (->html (div :class #{"big" "bold"}))))
+    (it "Sequential"
+      (should= "<div class=\"big bold\"></div>"
+               (->html (div :class ["big" "bold"])))))
   (with-private-fns [stch.html [extend-elem]]
     (context "extend-elem"
       (it "empty"

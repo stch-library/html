@@ -40,12 +40,14 @@
         (set? classes) classes
 
         (sequential? classes)
-        (set classes)))
+        (set classes)
+
+        :else #{}))
 
 (defn- combine-attrs
   [old-attrs new-attrs]
-  (if (and (:class old-attrs)
-           (:class new-attrs))
+  (if (or (:class old-attrs)
+          (:class new-attrs))
     (let [old-classes
           (classes->set (:class old-attrs))
 

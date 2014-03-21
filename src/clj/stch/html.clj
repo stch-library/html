@@ -100,12 +100,14 @@
         (set? classes) classes
 
         (sequential? classes)
-        (set classes)))
+        (set classes)
+
+        :else #{}))
 
 (defn' ^:private combine-attrs :- AttrMap
   [old-attrs :- AttrMap, new-attrs :- AttrMap]
-  (if (and (:class old-attrs)
-           (:class new-attrs))
+  (if (or (:class old-attrs)
+          (:class new-attrs))
     (let [old-classes
           (classes->set (:class old-attrs))
 

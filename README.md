@@ -111,7 +111,7 @@ Let's take a look at an example.
 ; "<select name=\"states\" class=\"us-states\"><option value=\"CA\">California</option><option value=\"FL\">Florida</option><option value=\"NY\">New York</option></select>"
 ```
 
-Here are the ways that you can pass args to an element fn.
+### Here are the ways that you can pass args to an element fn.
 
 No attributes, no children.
 
@@ -164,6 +164,23 @@ Element functions return an stch.html.Element record.  It's best to keep your ma
 ; "<ul class=\"user-list\"><li class=\"user\">Billy</li><li class=\"user\">Bobby</li></ul>"
 ```
 
+### class attribute
+
+The class attribute is special in that you can pass a String, Set, or Sequential type (vector, list, etc.) to it.  Let's take a look at some examples.
+
+```clojure
+(->html (div :class "big bold"))
+; "<div class=\"big bold\"></div>"
+
+(->html (div :class #{"big" "bold"}))
+; "<div class=\"big bold\"></div>"
+
+(->html (div :class ["big" "bold"]))
+; "<div class=\"big bold\"></div>"
+```
+
+### Macros
+
 There are two macros that can be used to define functions that contains html elements.
 
 ```clojure
@@ -188,6 +205,7 @@ defhtml automatically wraps the fn body in a call to ->html.
 
 deffrag, on the other hand, does not call ->html. It does wrap the fn body in a list.
 
+### Escaping
 
 Text nodes are automatically escaped for security. If you need to render a string without having it escaped, wrap it in a call to raw.
 
@@ -200,6 +218,8 @@ Text nodes are automatically escaped for security. If you need to render a strin
 (->html (raw "<script></script>"))
 ; "<script></script>"
 ```
+
+### Form fns
 
 There are a few form helper functions.
 
@@ -220,6 +240,7 @@ There are a few form helper functions.
 ; "<input checked=\"checked\" type=\"checkbox\" name=\"states\" value=\"CA\" id=\"states-0\"><label class=\"form-checkbox-label\" for=\"states-0\">California</label><input type=\"checkbox\" name=\"states\" value=\"FL\" id=\"states-1\"><label class=\"form-checkbox-label\" for=\"states-1\">Florida</label>"
 ```
 
+### Doctypes
 
 Finally there are some fns for generating common doctypes.
 
