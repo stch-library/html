@@ -14,6 +14,9 @@
             [codox "0.6.7"]]
   :source-paths ["src/clj" "src/cljs"]
   :test-paths ["spec"]
+  :codox {:sources ["src/clj"]
+          :src-dir-uri "https://github.com/stch-library/html/blob/master/"
+          :src-linenum-anchor-prefix "L"}
   :cljsbuild
   {:builds [{:id "browser-test"
              :source-paths ["src/cljs" "test"]
