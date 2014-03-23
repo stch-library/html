@@ -9,12 +9,14 @@ Based on ideas and some code from [Hoplon](https://github.com/tailrecursion/hopl
 Add the following to your project dependencies:
 
 ```clojure
-[stch-library/html "0.1.1"]
+[stch-library/html "0.1.2"]
 ```
 
 ## API Documentation
 
 http://stch-library.github.io/html
+
+Note: This library uses [stch.schema](https://github.com/stch-library/schema). Please refer to that project page for more information regarding type annotations and their meaning.
 
 ## How to use
 

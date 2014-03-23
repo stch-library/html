@@ -1,4 +1,4 @@
-(defproject stch-library/html "0.1.1"
+(defproject stch-library/html "0.1.2"
   :description
   "DSL for HTML generation. Supports Clojure and ClojureScript."
   :url "https://github.com/stch-library/html"
@@ -6,7 +6,7 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.5.1"]
                  [org.clojure/clojurescript "0.0-2173"]
-                 [stch-library/schema "0.3.2"]]
+                 [stch-library/schema "0.3.3"]]
   :profiles {:dev {:dependencies [[speclj "3.0.2"]
                                   [stch-library/dom "0.1.0"]]}}
   :plugins [[speclj "3.0.2"]
